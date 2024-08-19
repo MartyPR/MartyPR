@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.608e814f.css",
-    "main.js": "/static/js/main.dcad9542.js",
-    "static/media/img1.png": "/static/media/img1.7d12d94a6b377968b7ce.png",
-    "static/media/Articulo_bio.pdf": "/static/media/Articulo_bio.91d2d2ab16538ea1637f.pdf",
-    "static/media/Articulo_industrial.pdf": "/static/media/Articulo_industrial.de8fcf15761b80108906.pdf",
-    "static/media/img2.png": "/static/media/img2.0ddafbfaefaeb8b510c4.png",
-    "static/media/Proyecto.pdf": "/static/media/Proyecto.b88fd095b9c780ee7037.pdf",
-    "static/media/img4.png": "/static/media/img4.544b420ecd92eeda4a81.png",
-    "static/media/img3.png": "/static/media/img3.1db77fa7977565756f08.png",
-    "static/media/imgU3.PNG": "/static/media/imgU3.fc9ede4692f051153601.PNG",
-    "static/media/img5.png": "/static/media/img5.01f2f0d3af2d8e63c980.png",
-    "static/media/imgU1.png": "/static/media/imgU1.c46a05bc84bc7021150d.png",
-    "static/media/imgU2.PNG": "/static/media/imgU2.59e5a2684aa44e8b3298.PNG",
-    "index.html": "/index.html",
-    "main.608e814f.css.map": "/static/css/main.608e814f.css.map",
-    "main.dcad9542.js.map": "/static/js/main.dcad9542.js.map"
+    "main.css": "/MartyPR/static/css/main.608e814f.css",
+    "main.js": "/MartyPR/static/js/main.d0627bcc.js",
+    "static/media/img1.png": "/MartyPR/static/media/img1.7d12d94a6b377968b7ce.png",
+    "static/media/Articulo_bio.pdf": "/MartyPR/static/media/Articulo_bio.91d2d2ab16538ea1637f.pdf",
+    "static/media/Articulo_industrial.pdf": "/MartyPR/static/media/Articulo_industrial.de8fcf15761b80108906.pdf",
+    "static/media/img2.png": "/MartyPR/static/media/img2.0ddafbfaefaeb8b510c4.png",
+    "static/media/Proyecto.pdf": "/MartyPR/static/media/Proyecto.b88fd095b9c780ee7037.pdf",
+    "static/media/img4.png": "/MartyPR/static/media/img4.544b420ecd92eeda4a81.png",
+    "static/media/img3.png": "/MartyPR/static/media/img3.1db77fa7977565756f08.png",
+    "static/media/imgU3.PNG": "/MartyPR/static/media/imgU3.fc9ede4692f051153601.PNG",
+    "static/media/img5.png": "/MartyPR/static/media/img5.01f2f0d3af2d8e63c980.png",
+    "static/media/imgU1.png": "/MartyPR/static/media/imgU1.c46a05bc84bc7021150d.png",
+    "static/media/imgU2.PNG": "/MartyPR/static/media/imgU2.59e5a2684aa44e8b3298.PNG",
+    "index.html": "/MartyPR/index.html",
+    "main.608e814f.css.map": "/MartyPR/static/css/main.608e814f.css.map",
+    "main.d0627bcc.js.map": "/MartyPR/static/js/main.d0627bcc.js.map"
   },
   "entrypoints": [
     "static/css/main.608e814f.css",
-    "static/js/main.dcad9542.js"
+    "static/js/main.d0627bcc.js"
   ]
 }
