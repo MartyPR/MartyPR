@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Nabvar from "./components/Navbar/Nabvar";
+import Header from "./components/Header/Header";
+import { ThemeProvider } from "./components/ThemeContext";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Portafolio } from "./components/Portafolio/Portafolio";
+import Error_404 from "./components/404/404";
+import ProjectDetails, {
+  ProjectDetailsUni,
+} from "./components/ProjectDetails/ProjectDetails";
+import Foot from "./components/Foot/Foot";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider>
+      <BrowserRouter>
+        <Nabvar />
+        <Foot />
+        <div className="pageContainer">
+          <Routes>
+            <Route path="/" element={<Header />} />
+            <Route path="/projects" element={<Portafolio />} />
+            <Route path="/projects/:projectId" element={<ProjectDetails />} />
+            <Route
+              path="/projectsUni/:projectUniId"
+              element={<ProjectDetailsUni />}
+            />
+            <Route path="/projectsUni/*" element={<Error_404 />} />
+            <Route path="/contact/*" element={<Contact />} />
+            <Route path="*" element={<Error_404 />} />
+          </Routes>
+
+        </div>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 

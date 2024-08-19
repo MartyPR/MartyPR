@@ -1,0 +1,173 @@
+.head-container {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 8px;
+  width: 55%;
+  margin: 0 auto;
+  max-width: 758px;
+  max-height: 100%;
+  height: 100vh;
+  @media (max-width: 1400px) {
+    width: 70%;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0;
+    width: 85%;
+  }
+
+  @media (max-width: 480px) {
+    margin: 0 -20px;
+  }
+}
+
+.head-introduction {
+  border-radius: 12px;
+  margin-bottom: 24px;
+  margin-top: 24px;
+  padding: 14px;
+  text-align: center;
+  background-color: RGBA(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.head-introduction.dark-mode {
+  background-color: RGBA(255, 255, 255, 0.36);
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoProfile {
+  flex-grow: 1;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center;
+  margin-top: 20px;
+}
+.titleName {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.right {
+  flex-shrink: 0;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .right {
+    margin-top: 0;
+    margin-left: 24px;
+  }
+  .header-content {
+    display: flex;
+  }
+  .header-content {
+    flex-direction: row;
+  }
+}
+/*! Animation for Profile Imagen-----------------------  */
+.ProfileImage {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: rgb(22, 22, 22);
+  align-items: center;
+  justify-items: center;
+}
+.ProfileImage.dark-mode {
+  background-color: #969696;
+}
+
+.ProfileImage::before {
+  content: "";
+  position: absolute;
+  inset: -10px 30px;
+  background: linear-gradient(315deg, #e73f3f, #e73f3f);
+  transition: 0.5s;
+  animation: rotate 4s linear infinite;
+}
+.ProfileImage.dark-mode::before {
+  background: linear-gradient(315deg, black, black);
+}
+
+.ProfileImage:hover::before {
+  inset: -10px -10px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  0% {
+    transform: rotate(360deg);
+  }
+}
+
+.ProfileImage::after {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  background: var(--background-color-dark);
+  border-radius: 50%;
+  z-index: 1;
+}
+.ProfileImage.dark-mode::after {
+  background: rgb(255, 255, 255);
+}
+.contentPhoto {
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgb(22, 22, 22);
+  z-index: 3;
+  border-radius: 50%;
+}
+.ProfileImage.dark-mode .contentPhoto {
+  border: 2px solid #969696;
+}
+
+.profilePhoto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+  pointer-events: none;
+  border-radius: 50%;
+}
+
+.head-introduction:hover {
+  animation: vibrate 0.4s linear both;
+}
+
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}

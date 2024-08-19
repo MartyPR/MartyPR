@@ -1,0 +1,142 @@
+.project-details-container {
+  position: absolute;
+  top: 5.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 8px;
+  width: 55%;
+  margin: 0 auto;
+  max-width: 850px;
+  height: 100vh;
+  animation: fadeIn 0.8s ease forwards;
+
+  @media (max-width: 1400px) {
+    width: 80%;
+  }
+
+  @media (max-width: 960px) {
+    margin: 0;
+    width: 90%;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.project-title {
+  margin: 0.8rem;
+  font-weight: solid;
+  color: #e73f3f;
+}
+.project-content-details {
+  font-size: 1.4rem;
+  margin: 0 15px;
+}
+
+.project-list {
+  list-style: none;
+  margin: 1.7rem;
+}
+.project-list li {
+  margin-bottom: 0.8rem;
+}
+.project-list li a {
+  text-decoration: none;
+  color: #e73f3f;
+}
+
+.project-list-title {
+  font-size: 1.2rem;
+  padding: 0 2px;
+  margin-right: 1rem;
+
+  background-color: #9ae6b429;
+  color: #73e199;
+}
+
+.slider-wrapper {
+  position: relative;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+.slider {
+  display: flex;
+  aspect-ratio: 16/8;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3.2rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 0.5rem;
+
+  /* Oculta el scrollbar en WebKit (Chrome, Safari) */
+  -webkit-overflow-scrolling: touch;
+}
+
+.slider::-webkit-scrollbar {
+  display: none;
+}
+
+/* Oculta el scrollbar en Firefox */
+.slider {
+  scrollbar-width: none; /* Firefox */
+}
+
+.slider img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.slider-nav a {
+
+}
+.slider-nav a:hover {
+ 
+}
+
+.slider-nav button {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.75;
+  transition: opacity ease 500ms;
+  cursor: pointer;
+}
+
+.slider-nav button:focus {
+  opacity: 1  ;
+  
+}
+
+.slider-uni {
+  display: flex;
+  aspect-ratio: 16/11;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 3.2rem -0.75rem hsla(0, 0%, 0%, 0.25);
+  border-radius: 0.5rem;
+
+  /* Oculta el scrollbar en WebKit (Chrome, Safari) */
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.slider-uni img {
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}

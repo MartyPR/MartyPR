@@ -1,0 +1,60 @@
+
+.container-block-container {
+    position: absolute;
+    top: 5.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-bottom: 8px;
+    width: 55%;
+    margin: 0 auto;
+    max-width: 758px;
+    height: 100vh;
+    animation: fadeIn 0.8s ease forwards;
+      
+    @media (max-width: 1400px) {
+      width: 80%;
+    }
+    
+  
+    @media (max-width: 960px) {
+      margin: 0;
+      width: 100%;
+    }
+    
+  }
+  @keyframes fadeIn {
+    0% {
+      
+      opacity: 0;
+    }
+    100% {
+     
+      opacity: 1;
+    }
+  }
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  }
+  
+
+  
+  .contact-info p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #ccc;
+  }
+  
+  .contact-info a {
+    color: #e63946;
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    text-decoration: underline;
+  }
+  
