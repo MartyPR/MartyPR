@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/MartyPR/static/css/main.608e814f.css",
-    "main.js": "/MartyPR/static/js/main.d0627bcc.js",
+    "main.js": "/MartyPR/static/js/main.70dbb36c.js",
     "static/media/img1.png": "/MartyPR/static/media/img1.7d12d94a6b377968b7ce.png",
     "static/media/Articulo_bio.pdf": "/MartyPR/static/media/Articulo_bio.91d2d2ab16538ea1637f.pdf",
     "static/media/Articulo_industrial.pdf": "/MartyPR/static/media/Articulo_industrial.de8fcf15761b80108906.pdf",
@@ -15,10 +15,10 @@
     "static/media/imgU2.PNG": "/MartyPR/static/media/imgU2.59e5a2684aa44e8b3298.PNG",
     "index.html": "/MartyPR/index.html",
     "main.608e814f.css.map": "/MartyPR/static/css/main.608e814f.css.map",
-    "main.d0627bcc.js.map": "/MartyPR/static/js/main.d0627bcc.js.map"
+    "main.70dbb36c.js.map": "/MartyPR/static/js/main.70dbb36c.js.map"
   },
   "entrypoints": [
     "static/css/main.608e814f.css",
-    "static/js/main.d0627bcc.js"
+    "static/js/main.70dbb36c.js"
   ]
 }
