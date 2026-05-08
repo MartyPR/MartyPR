@@ -1,24 +1,18 @@
 {
   "files": {
-    "main.css": "/MartyPR/static/css/main.8a07572d.css",
-    "main.js": "/MartyPR/static/js/main.747c6b7f.js",
-    "static/media/img1.png": "/MartyPR/static/media/img1.7d12d94a6b377968b7ce.png",
-    "static/media/Articulo_bio.pdf": "/MartyPR/static/media/Articulo_bio.91d2d2ab16538ea1637f.pdf",
-    "static/media/Articulo_industrial.pdf": "/MartyPR/static/media/Articulo_industrial.de8fcf15761b80108906.pdf",
-    "static/media/img2.png": "/MartyPR/static/media/img2.0ddafbfaefaeb8b510c4.png",
-    "static/media/Proyecto.pdf": "/MartyPR/static/media/Proyecto.b88fd095b9c780ee7037.pdf",
-    "static/media/img4.png": "/MartyPR/static/media/img4.544b420ecd92eeda4a81.png",
-    "static/media/img3.png": "/MartyPR/static/media/img3.1db77fa7977565756f08.png",
-    "static/media/imgU3.PNG": "/MartyPR/static/media/imgU3.fc9ede4692f051153601.PNG",
-    "static/media/img5.png": "/MartyPR/static/media/img5.01f2f0d3af2d8e63c980.png",
-    "static/media/imgU1.png": "/MartyPR/static/media/imgU1.c46a05bc84bc7021150d.png",
-    "static/media/imgU2.PNG": "/MartyPR/static/media/imgU2.59e5a2684aa44e8b3298.PNG",
+    "main.css": "/MartyPR/static/css/main.9f8a0819.css",
+    "main.js": "/MartyPR/static/js/main.36aa0dce.js",
+    "static/media/img1.png": "/MartyPR/static/media/img1.b0d5f98b5e542efdf7be.png",
+    "static/media/img2.png": "/MartyPR/static/media/img2.d12a5107a74d33753259.png",
+    "static/media/img4.png": "/MartyPR/static/media/img4.1fb65eddf12ac17e79b4.png",
+    "static/media/img3.png": "/MartyPR/static/media/img3.e3d5297a5bd1b52e7baf.png",
+    "static/media/img5.png": "/MartyPR/static/media/img5.53250b97854b88392413.png",
     "index.html": "/MartyPR/index.html",
-    "main.8a07572d.css.map": "/MartyPR/static/css/main.8a07572d.css.map",
-    "main.747c6b7f.js.map": "/MartyPR/static/js/main.747c6b7f.js.map"
+    "main.9f8a0819.css.map": "/MartyPR/static/css/main.9f8a0819.css.map",
+    "main.36aa0dce.js.map": "/MartyPR/static/js/main.36aa0dce.js.map"
   },
   "entrypoints": [
-    "static/css/main.8a07572d.css",
-    "static/js/main.747c6b7f.js"
+    "static/css/main.9f8a0819.css",
+    "static/js/main.36aa0dce.js"
   ]
 }

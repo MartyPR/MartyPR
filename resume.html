@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martin Parada Rodríguez — CV</title>
+    <style>
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #0f3460;
+            --highlight: #e94560;
+            --text: #333;
+            --muted: #666;
+            --bg: #f5f5f5;
+            --card-bg: #fff;
+            --border: #e0e0e0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+        .page {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+            color: #fff;
+            padding: 48px 48px 36px;
+        }
+        .header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+        .header .title {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        .header .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px 28px;
+            font-size: 0.9rem;
+            opacity: 0.85;
+        }
+        .header .contact a {
+            color: #fff;
+            text-decoration: none;
+            border-bottom: 1px dotted rgba(255,255,255,0.3);
+        }
+        .header .contact a:hover {
+            border-bottom-color: var(--highlight);
+        }
+        .body {
+            padding: 36px 48px 48px;
+        }
+        .section {
+            margin-bottom: 32px;
+        }
+        .section:last-child {
+            margin-bottom: 0;
+        }
+        .section-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent);
+            border-bottom: 3px solid var(--highlight);
+            padding-bottom: 6px;
+            margin-bottom: 18px;
+        }
+        .summary-text {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #444;
+        }
+        .entry {
+            margin-bottom: 22px;
+        }
+        .entry:last-child {
+            margin-bottom: 0;
+        }
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 4px 12px;
+            margin-bottom: 4px;
+        }
+        .entry-role {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .entry-org {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+        .entry-date {
+            font-size: 0.85rem;
+            color: var(--muted);
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        .entry-desc {
+            font-size: 0.92rem;
+            color: #444;
+            margin-top: 6px;
+        }
+        .entry-desc ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 4px;
+        }
+        .entry-desc ul li {
+            position: relative;
+            padding-left: 18px;
+            margin-bottom: 3px;
+        }
+        .entry-desc ul li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--highlight);
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 32px;
+        }
+        .skill-cat {
+            font-size: 0.92rem;
+        }
+        .skill-cat strong {
+            display: block;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
+        .skill-cat span {
+            color: #555;
+        }
+        .edu-entry {
+            margin-bottom: 14px;
+        }
+        .edu-entry:last-child {
+            margin-bottom: 0;
+        }
+        .edu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 4px 12px;
+        }
+        .edu-title {
+            font-weight: 700;
+            color: var(--primary);
+        }
+        .edu-org {
+            font-weight: 600;
+            color: var(--accent);
+        }
+        .edu-date {
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+        .edu-detail {
+            font-size: 0.88rem;
+            color: #555;
+            margin-top: 2px;
+        }
+        .certs {
+            columns: 2;
+            column-gap: 24px;
+        }
+        .certs li {
+            font-size: 0.88rem;
+            color: #555;
+            margin-bottom: 3px;
+            break-inside: avoid;
+            padding-left: 18px;
+            position: relative;
+            list-style: none;
+        }
+        .certs li::before {
+            content: "•";
+            position: absolute;
+            left: 4px;
+            color: var(--highlight);
+        }
+        .refs {
+            font-size: 0.9rem;
+            color: var(--muted);
+            font-style: italic;
+        }
+        .refs strong {
+            color: var(--primary);
+            font-style: normal;
+        }
+        @media (max-width: 700px) {
+            .header { padding: 28px 24px 24px; }
+            .header h1 { font-size: 2rem; }
+            .body { padding: 24px; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .certs { columns: 1; }
+        }
+        @media print {
+            body { padding: 0; background: #fff; }
+            .page { box-shadow: none; border-radius: 0; max-width: 100%; }
+            .header { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .section-title { border-bottom-color: #e94560 !important; }
+            .entry-desc ul li::before { color: #e94560 !important; }
+            .certs li::before { color: #e94560 !important; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <div class="header">
+        <h1>Martin Parada Rodríguez</h1>
+        <div class="title">AI &amp; Fullstack Developer</div>
+        <div class="contact">
+            <span>📍 Bogotá, Colombia</span>
+            <span>📞 +57 316 0552312</span>
+            <span>✉️ <a href="mailto:martin.p1131@gmail.com">martin.p1131@gmail.com</a></span>
+            <span>🔗 <a href="https://linkedin.com/in/martin-parada-rodriguez/" target="_blank">linkedin.com/in/martin-parada-rodriguez</a></span>
+            <span>🐙 <a href="https://github.com/MartyPR" target="_blank">github.com/MartyPR</a></span>
+            <span>🌐 <a href="https://martypr.github.io/" target="_blank">martypr.github.io</a></span>
+        </div>
+    </div>
+
+    <div class="body">
+        <!-- SUMMARY -->
+        <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <div class="summary-text">
+                Software Engineer with a strong foundation in backend development (<strong>.NET, C#, Python, Java, Node.js</strong>) and growing expertise in <strong>Artificial Intelligence and Machine Learning</strong>. Currently contributing to the Casiopea project at Inetum, where I combine backend development with problem-solving, innovation, and technology convergence. Experienced in <strong>fullstack development</strong> with <strong>React, Angular, SQL Server, and MongoDB</strong>, and actively building skills in <strong>Generative AI, LLM-based workflows, prompt engineering, and RAG systems</strong>. My background in Electronic Engineering and Cybersecurity has sharpened my analytical thinking, attention to detail, and ability to tackle complex technical challenges across the entire stack.
+            </div>
+        </div>
+
+        <!-- EXPERIENCE -->
+        <div class="section">
+            <div class="section-title">Work Experience</div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-role">Backend Developer</span>
+                    <span class="entry-date">Oct 2024 – Present</span>
+                </div>
+                <div class="entry-org">Inetum — Proyecto Casiopea</div>
+                <div class="entry-desc">
+                    <ul>
+                        <li>Develop and maintain backend services for the Casiopea platform, ensuring system stability, performance, and data integrity.</li>
+                        <li>Implement corrective and evolutionary maintenance to improve reliability and user experience.</li>
+                        <li>Design and develop new features that enhance platform functionality and scalability.</li>
+                        <li>Drive technology convergence initiatives to ensure long-term compatibility and scalability of the solution.</li>
+                        <li>Debug and resolve production issues through log analysis, error tracing, and root cause investigation.</li>
+                        <li>Collaborate using Git-based workflows and Agile methodologies (Scrum) with cross-functional teams.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-role">Software Development Training</span>
+                    <span class="entry-date">Dec 2024 – Mar 2025</span>
+                </div>
+                <div class="entry-org">Sofka U — Intensive Fullstack Program</div>
+                <div class="entry-desc">
+                    <ul>
+                        <li>Intensive training in fullstack development: <strong>Java, Spring Boot, Angular, Node.js, MongoDB</strong>, Agile methodologies (Scrum), and DevOps practices.</li>
+                        <li>Completed real-world projects applying clean code principles, automated testing, and teamwork.</li>
+                        <li>Acquired best practices in code quality, version control, and continuous integration.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-role">Independent Projects — AI &amp; Fullstack Development</span>
+                    <span class="entry-date">Mar 2023 – Oct 2024</span>
+                </div>
+                <div class="entry-desc">
+                    <ul>
+                        <li>Developed Machine Learning projects exploring data science workflows, regression, classification, and model evaluation using Python.</li>
+                        <li>Built frontend applications with <strong>React</strong> and <strong>Angular</strong>, applying modern JavaScript/TypeScript, async patterns, and responsive design.</li>
+                        <li>Designed and implemented <strong>RESTful APIs</strong> with Node.js and Express.js for fullstack web applications.</li>
+                        <li>Experimented with <strong>Generative AI workflows</strong> using LLM APIs (OpenAI) for text summarization and question answering.</li>
+                        <li>Designed and tested prompt templates to improve LLM response quality and consistency.</li>
+                        <li>Explored <strong>RAG (Retrieval-Augmented Generation)</strong> concepts and vector embeddings for AI-powered applications.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span class="entry-role">IT Support Analyst</span>
+                    <span class="entry-date">Jul 2022 – Jan 2023</span>
+                </div>
+                <div class="entry-org">Accenture</div>
+                <div class="entry-desc">
+                    <ul>
+                        <li>Provided support and maintenance for corporate applications in an enterprise environment.</li>
+                        <li>Analyzed and resolved incidents related to system configuration, data consistency, and asset management.</li>
+                        <li>Designed and modeled a relational database (CMDB) to support internal information systems.</li>
+                        <li>Collaborated with multiple teams following corporate processes and quality standards.</li>
+                        <li>Gained exposure to enterprise DevOps workflows and IT governance practices.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="section">
+            <div class="section-title">Education</div>
+
+            <div class="edu-entry">
+                <div class="edu-header">
+                    <span class="edu-title">Electronic Engineering</span>
+                    <span class="edu-date">2017 – 2023</span>
+                </div>
+                <div class="edu-org">Manuela Beltrán University, Bogotá</div>
+                <div class="edu-detail">Final GPA: 4.2 / 5.0 · Scholarship for academic merit (2017–2019)</div>
+                <div class="edu-detail">Cybersecurity Diploma — Cyber defense, ethical hacking, cryptographic protocols, security auditing (2022)</div>
+            </div>
+
+            <div class="edu-entry">
+                <div class="edu-header">
+                    <span class="edu-title">Intensive English Program — C1 (Advanced)</span>
+                    <span class="edu-date">2023 – 2024</span>
+                </div>
+                <div class="edu-org">EF Education First, Sydney, Australia</div>
+                <div class="edu-detail">One-year immersion experience developing professional and cultural communication skills.</div>
+            </div>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-cat">
+                    <strong>Programming Languages</strong>
+                    <span>Python, Java, C#, JavaScript, TypeScript</span>
+                </div>
+                <div class="skill-cat">
+                    <strong>Backend &amp; APIs</strong>
+                    <span>.NET, Node.js, Express.js, Spring Boot, FastAPI / Flask (basic), RESTful API Design, JSON</span>
+                </div>
+                <div class="skill-cat">
+                    <strong>Frontend</strong>
+                    <span>React, Angular, HTML5 / CSS3, Responsive Design</span>
+                </div>
+                <div class="skill-cat">
+                    <strong>Databases</strong>
+                    <span>SQL Server, MongoDB, Relational Database Design, Data Modeling</span>
+                </div>
+                <div class="skill-cat">
+                    <strong>AI &amp; Machine Learning</strong>
+                    <span>ML fundamentals (regression, classification), Large Language Models (LLMs), Prompt Engineering, RAG concepts, Vector Embeddings, API-based AI services (OpenAI)</span>
+                </div>
+                <div class="skill-cat">
+                    <strong>Cloud &amp; DevOps</strong>
+                    <span>Firebase, Basic AWS / Azure, Git, CI/CD concepts, Agile / Scrum</span>
+                </div>
+                <div class="skill-cat">
+                    <strong>Software Engineering</strong>
+                    <span>Debugging &amp; Troubleshooting, Problem Decomposition, Code Analysis &amp; Refactoring, Automated Testing, Root Cause Analysis, Clean Code</span>
+                </div>
+                <div class="skill-cat">
+                    <strong>Languages</strong>
+                    <span>Spanish (Native) &nbsp;·&nbsp; English C1 (Advanced) — EF Certification</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- CERTIFICATIONS -->
+        <div class="section">
+            <div class="section-title">Certifications &amp; Courses</div>
+            <ul class="certs">
+                <li>Machine Learning de A a la Z: R y Python para Data Science — Udemy (2026)</li>
+                <li>Backend Course with Node.js: RESTful API with Express.js — Platzi (2023)</li>
+                <li>Practical React.js Course — Platzi (2023)</li>
+                <li>Frontend Developer — Platzi (2023)</li>
+                <li>Asynchronism with JavaScript — Platzi (2023)</li>
+                <li>Ultimate HTML and CSS Course — Platzi (2023)</li>
+                <li>NPM: Package and Dependency Management — Platzi (2023)</li>
+                <li>Python Data Structures — University of Michigan / Coursera (2021)</li>
+                <li>Using Python to Access Web Data — University of Michigan / Coursera (2021)</li>
+            </ul>
+        </div>
+
+        <!-- REFERENCES -->
+        <div class="section">
+            <div class="section-title">References</div>
+            <div class="refs">
+                <strong>Ing. Héctor Miguel Vargas García</strong> — Doctor in Electronic Engineering · +57 310 301 7085<br>
+                <strong>Ing. Luisa Fernanda Barragán Avila</strong> — Full-Stack Engineer · +57 321 240 5892
+            </div>
+            <div class="refs" style="margin-top: 8px;">
+                Available upon request. Contact details from both academic and professional references included above.
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
